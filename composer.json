@@ -1,0 +1,45 @@
+{
+  "name": "dotkernel/dot-inputfilter",
+  "description": "Adapts zend-inputfilter to DotKernel applications",
+  "authors": [
+    {
+      "name": "Popa Tiberiu",
+      "email": "tibi@apidemia.com"
+    }
+  ],
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "dotkernel",
+    "input filter",
+    "factories",
+    "container",
+    "zf2",
+    "zf3",
+    "service-manager"
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "zendframework/zend-servicemanager": "^3.0",
+    "zendframework/zend-inputfilter": "^2.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.7",
+    "squizlabs/php_codesniffer": "^2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dot\\InputFilter\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DotTest\\InputFilter\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.6-dev"
+    }
+  }
+}
