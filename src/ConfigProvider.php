@@ -36,16 +36,14 @@ class ConfigProvider
     public function getDependenciesConfig()
     {
         return [
+            'abstract_factories' => [
+                InputFilterAbstractServiceFactory::class,
+            ],
             'factories' => [
-                'abstract_factories' => [
-                    InputFilterAbstractServiceFactory::class,
-                ],
-                'factories' => [
-                    'InputFilterManager' => InputFilterPluginManagerFactory::class,
-                ],
-                'aliases' => [
-                    InputFilterPluginManager::class => 'InputFilterManager',
-                ],
+                'InputFilterManager' => InputFilterPluginManagerFactory::class,
+            ],
+            'aliases' => [
+                InputFilterPluginManager::class => 'InputFilterManager',
             ],
         ];
     }

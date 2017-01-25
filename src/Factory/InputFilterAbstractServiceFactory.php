@@ -17,6 +17,8 @@ use Interop\Container\ContainerInterface;
  */
 class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbstractServiceFactory
 {
+    const PREFIX = 'dot-input-filter';
+
     /** @var string  */
     protected $configKey = 'dot_input_filter';
 
@@ -30,6 +32,14 @@ class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbs
      */
     public function canCreate(ContainerInterface $services, $rName)
     {
+        $parts = explode('.', $rName);
+        if (count($parts) !== 2) {
+            return false;
+        }
+        if ($parts[0] !== static::PREFIX) {
+            return false;
+        }
+
         if (! $services->has('config')) {
             return false;
         }
@@ -56,7 +66,8 @@ class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbs
     public function __invoke(ContainerInterface $services, $rName, array $options = null)
     {
         $config = $services->get('config');
-        $config = $config[$this->configKey][$this->subConfigKey][$rName];
+        $parts = explode('.', $rName);
+        $config = $config[$this->configKey][$this->subConfigKey][$parts[1]];
         $factory = $this->getInputFilterFactory($services);
 
         return $factory->createInputFilter($config);
