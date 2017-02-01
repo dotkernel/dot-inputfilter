@@ -7,6 +7,8 @@
  * Time: 11:59 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\InputFilter\Factory;
 
 use Interop\Container\ContainerInterface;
@@ -19,10 +21,10 @@ class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbs
 {
     const PREFIX = 'dot-input-filter';
 
-    /** @var string  */
+    /** @var string */
     protected $configKey = 'dot_input_filter';
 
-    /** @var string  */
+    /** @var string */
     protected $subConfigKey = 'input_filters';
 
     /**
@@ -40,17 +42,18 @@ class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbs
             return false;
         }
 
-        if (! $services->has('config')) {
+        if (!$services->has('config')) {
             return false;
         }
         $config = $services->get('config');
 
-        if (! isset($config[$this->configKey])) {
+        if (!isset($config[$this->configKey])) {
             return false;
         }
 
-        if (! isset($config[$this->configKey][$this->subConfigKey])
-            || ! is_array($config[$this->configKey][$this->subConfigKey])) {
+        if (!isset($config[$this->configKey][$this->subConfigKey])
+            || !is_array($config[$this->configKey][$this->subConfigKey])
+        ) {
             return false;
         }
 

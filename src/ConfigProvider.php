@@ -7,6 +7,8 @@
  * Time: 11:50 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\InputFilter;
 
 use Dot\InputFilter\Factory\InputFilterAbstractServiceFactory;
@@ -19,7 +21,7 @@ use Zend\InputFilter\InputFilterPluginManager;
  */
 class ConfigProvider
 {
-    public function __invoke()
+    public function __invoke(): array
     {
         return [
             'dependencies' => $this->getDependenciesConfig(),
@@ -33,7 +35,7 @@ class ConfigProvider
         ];
     }
 
-    public function getDependenciesConfig()
+    public function getDependenciesConfig(): array
     {
         return [
             'abstract_factories' => [
