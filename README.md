@@ -1,2 +1,3 @@
 # dot-inputfilter
-Adapts zend-inputfilter to DotKernel applications
+
+DotKernel input filter component extending and customizing [zend-inputfilter](https://github.com/zendframework/zend-inputfilter)

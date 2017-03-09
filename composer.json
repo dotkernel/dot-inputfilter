@@ -1,6 +1,6 @@
 {
   "name": "dotkernel/dot-inputfilter",
-  "description": "Adapts zend-inputfilter to DotKernel applications",
+  "description": "DotKernel input filter component extending and customizing zend-inputfilter",
   "authors": [
     {
       "name": "n3vrax",
@@ -23,23 +23,13 @@
     "zendframework/zend-servicemanager": "^3.0",
     "zendframework/zend-inputfilter": "^2.7",
 
-    "dotkernel/dot-filter": "0.6.x-dev",
-    "dotkernel/dot-validator": "0.6.x-dev"
+    "dotkernel/dot-filter": "^1.0",
+    "dotkernel/dot-validator": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.7",
     "squizlabs/php_codesniffer": "^2.5"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-filter"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-validator"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Dot\\InputFilter\\": "src"
@@ -52,7 +42,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.6-dev"
+      "dev-master": "1.1-dev"
     }
   }
 }
