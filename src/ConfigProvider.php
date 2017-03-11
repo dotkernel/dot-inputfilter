@@ -1,10 +1,8 @@
 <?php
 /**
- * @copyright: DotKernel
- * @library: dot-inputfilter
- * @author: n3vrax
- * Date: 1/24/2017
- * Time: 11:50 PM
+ * @see https://github.com/dotkernel/dot-inputfilter/ for the canonical source repository
+ * @copyright Copyright (c) 2017 Apidemia (https://www.apidemia.com)
+ * @license https://github.com/dotkernel/dot-inputfilter/blob/master/LICENSE.md MIT License
  */
 
 declare(strict_types = 1);
