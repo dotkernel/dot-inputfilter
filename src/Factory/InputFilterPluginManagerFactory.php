@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace Dot\InputFilter\Factory;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Zend\InputFilter\InputFilterPluginManager;
 
 /**
