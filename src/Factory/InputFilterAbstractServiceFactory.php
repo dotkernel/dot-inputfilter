@@ -15,7 +15,7 @@ use Interop\Container\ContainerInterface;
  * Class InputFilterAbstractServiceFactory
  * @package Dot\InputFilter\Factory
  */
-class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbstractServiceFactory
+class InputFilterAbstractServiceFactory extends \Laminas\InputFilter\InputFilterAbstractServiceFactory
 {
     const PREFIX = 'dot-input-filter';
 
@@ -62,7 +62,7 @@ class InputFilterAbstractServiceFactory extends \Zend\InputFilter\InputFilterAbs
      * @param ContainerInterface $services
      * @param string $rName
      * @param array|null $options
-     * @return \Zend\InputFilter\InputFilterInterface
+     * @return \Laminas\InputFilter\InputFilterInterface
      */
     public function __invoke(ContainerInterface $services, $rName, array $options = null)
     {

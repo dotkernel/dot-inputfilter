@@ -11,7 +11,7 @@ namespace Dot\InputFilter;
 
 use Dot\InputFilter\Factory\InputFilterAbstractServiceFactory;
 use Dot\InputFilter\Factory\InputFilterPluginManagerFactory;
-use Zend\InputFilter\InputFilterPluginManager;
+use Laminas\InputFilter\InputFilterPluginManager;
 
 /**
  * Class ConfigProvider
