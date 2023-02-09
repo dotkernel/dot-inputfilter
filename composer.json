@@ -14,36 +14,25 @@
         "input filter",
         "factories",
         "container",
-        "zf2",
-        "zf3",
+        "laminas",
+        "mezzio",
         "service-manager"
     ],
     "require": {
-        "php": "^7.2",
+        "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
         "laminas/laminas-servicemanager": "^3.3",
         "laminas/laminas-inputfilter": "^2.8",
-        "dotkernel/dot-filter": "^2.0",
-        "dotkernel/dot-validator": "^2.0",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "dotkernel/dot-filter": "~2.9.0",
+        "dotkernel/dot-validator": "~2.9.0",
+        "laminas/laminas-dependency-plugin": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.7",
-        "squizlabs/php_codesniffer": "^2.5"
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
     },
     "autoload": {
         "psr-4": {
             "Dot\\InputFilter\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "DotTest\\InputFilter\\": "tests"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0-dev",
-            "dev-develop": "2.1-dev"
         }
     }
 }
