@@ -8,7 +8,6 @@
 DotKernel input filter component extending and customizing [laminas-inputfilter](https://github.com/laminas/laminas-inputfilter)
 
 ## Note
-**dot-inputfilter** is in **maintenance** mode.
+> **dot-inputfilter** is in **maintenance** mode.
 
-This package is considered feature-complete, and is now in **security-only** maintenance mode.
-
+> This package is considered feature-complete, and is now in **security-only** maintenance mode.
