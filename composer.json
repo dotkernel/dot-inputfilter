@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "laminas/laminas-servicemanager": "^4.0.x-dev",
+        "laminas/laminas-servicemanager": "^3.22.1",
         "laminas/laminas-inputfilter": "^2.28.0",
         "dotkernel/dot-filter": "~2.10.0",
         "dotkernel/dot-validator": "~2.9.1"
